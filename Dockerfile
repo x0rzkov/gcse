@@ -81,11 +81,11 @@ COPY --from=builder /go/src/github.com/x0rzkov/gcse/pipelines/tocrawl/tocrawl /o
 
 COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/stored/stored /opt/gcse/bin/stored
 COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/web-server  /opt/gcse/bin/web-server 
-COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/web  /opt/gcse/data/web
-COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/static  /opt/gcse/data/static
-COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/resource  /opt/gcse/data/resource
-COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/images  /opt/gcse/data/images
-COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/css  /opt/gcse/data/css
+COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/web  /opt/gcse/data/service/web/web
+COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/static  /opt/gcse/data/service/web/static
+COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/resource  /opt/gcse/data/service/web/resource
+COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/images  /opt/gcse/data/service/web/images
+COPY --from=builder /go/src/github.com/x0rzkov/gcse/service/web/css  /opt/gcse/data/service/web/css
 
 COPY --from=builder /go/src/github.com/x0rzkov/gcse/tools/countdocs/countdocs /opt/gcse/bin/countdocs
 COPY --from=builder /go/src/github.com/x0rzkov/gcse/tools/dump/dump /opt/gcse/bin/dump
@@ -95,8 +95,7 @@ COPY --from=builder /go/src/github.com/x0rzkov/gcse/tools/fixcrawldb/fixcrawldb 
 
 ENV PATH $PATH:/opt/gcse/bin
 
-RUN mkdir -p /opt/gcse/data/data/docs-updated && \
-    mkdir -p /opt/gcse/data/data/docs
+RUN cd /opt/gcse/data && mkdir -p data/docs-updated data/docs data/newdocs data/person data/crawler data/tocrawl data/package data/store
 
 # Container metadata
 LABEL name="gcse" \
