@@ -13,7 +13,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/daviddengcn/gcse/spider"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/errors"
@@ -21,7 +20,8 @@ import (
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/spider"
 )
 
 var ErrInvalidPackage = errors.New("the package is not a Go package")

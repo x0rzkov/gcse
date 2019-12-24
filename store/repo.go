@@ -3,13 +3,12 @@ package store
 import (
 	"log"
 
+	"github.com/daviddengcn/bolthelper"
 	"github.com/golang/protobuf/proto"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/errors"
 
-	"github.com/daviddengcn/bolthelper"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 // Returns an empty (non-nil) PackageInfo if not found.

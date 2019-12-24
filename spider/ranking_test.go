@@ -9,7 +9,7 @@ import (
 	"github.com/golangplus/testing/assert"
 	"github.com/golangplus/time"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 func TestLikeGoSubFolder(t *testing.T) {

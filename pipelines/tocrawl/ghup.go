@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/store"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/golang/glog"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/store"
 )
 
 // touchPackage forces a package to update if it was not crawled before a

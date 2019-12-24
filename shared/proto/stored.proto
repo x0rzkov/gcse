@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package gcse;
 
-import "github.com/daviddengcn/gcse/shared/proto/spider.proto";
+import "github.com/x0rzkov/gcse/shared/proto/spider.proto";
 
 option go_package = "gcsepb";
 

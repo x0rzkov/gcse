@@ -8,7 +8,7 @@ import (
 	"github.com/golang/glog"
 	"github.com/golang/protobuf/ptypes"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 func (s *server) pageCrawlHistory(w http.ResponseWriter, r *http.Request) {

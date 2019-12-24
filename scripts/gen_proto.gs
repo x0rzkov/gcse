@@ -2,7 +2,7 @@
 
 import "path/filepath"
 
-const GCSE = "github.com/daviddengcn/gcse"
+const GCSE = "github.com/x0rzkov/gcse"
 
 protoPath, _ := filepath.Abs("shared/proto/*.proto")
 

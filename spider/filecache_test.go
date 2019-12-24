@@ -5,11 +5,10 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/daviddengcn/bolthelper"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/bolthelper"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 func TestNullFileCache(t *testing.T) {

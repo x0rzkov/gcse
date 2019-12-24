@@ -1,8 +1,9 @@
 package pkg
 
 import (
-	"github.com/daviddengcn/gcse/spider/github"
 	strs "github.com/golangplus/strings"
+
+	"github.com/x0rzkov/gcse/spider/github"
 )
 
 var _ = github.ErrInvalidPackage

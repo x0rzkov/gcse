@@ -1,13 +1,14 @@
 package main
 
 import (
+	"io"
 	"log"
 
-	"github.com/golangplus/fmt"
-
-	"github.com/daviddengcn/gcse"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
+	"github.com/golangplus/fmt"
+
+	"github.com/x0rzkov/gcse"
 )
 
 func main() {
@@ -31,7 +32,7 @@ func main() {
 		var val gcse.DocInfo
 		for {
 			if err := it.Next(&key, &val); err != nil {
-				if err == sophie.EOF {
+				if err == io.EOF {
 					break
 				}
 				log.Fatalf("it.Next failed %v", err)

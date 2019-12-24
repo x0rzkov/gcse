@@ -5,18 +5,17 @@ import (
 	"path"
 	"testing"
 
-	"github.com/golangplus/strings"
-	"github.com/golangplus/testing/assert"
-
-	"github.com/daviddengcn/go-index"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/mr"
+	"github.com/golangplus/strings"
+	"github.com/golangplus/testing/assert"
+	"github.com/x0rzkov/go-index"
 )
 
 func TestIndex(t *testing.T) {
 	const (
-		package0 = "github.com/daviddengcn/gcse"
-		package1 = "github.com/daviddengcn/gcse/indexer"
+		package0 = "github.com/x0rzkov/gcse"
+		package1 = "github.com/x0rzkov/gcse/indexer"
 		package2 = "github.com/daviddengcn/go-villa"
 	)
 
@@ -92,14 +91,14 @@ func TestIndex(t *testing.T) {
 	}
 	assert.StringEqual(t, "all", pkgs,
 		[]string{
-			"github.com/daviddengcn/gcse",
+			"github.com/x0rzkov/gcse",
 			"github.com/daviddengcn/go-villa",
-			"github.com/daviddengcn/gcse/indexer",
+			"github.com/x0rzkov/gcse/indexer",
 		})
 
 	var gcseInfo HitInfo
 	if err := ts.Search(map[string]stringsp.Set{
-		IndexPkgField: stringsp.NewSet("github.com/daviddengcn/gcse"),
+		IndexPkgField: stringsp.NewSet("github.com/x0rzkov/gcse"),
 	}, func(docID int32, data interface{}) error {
 		gcseInfo = data.(HitInfo)
 		return nil
@@ -113,7 +112,7 @@ func TestIndex(t *testing.T) {
 
 	var indexerInfo HitInfo
 	if err := ts.Search(map[string]stringsp.Set{
-		IndexPkgField: stringsp.NewSet("github.com/daviddengcn/gcse/indexer"),
+		IndexPkgField: stringsp.NewSet("github.com/x0rzkov/gcse/indexer"),
 	}, func(docID int32, data interface{}) error {
 		gcseInfo = data.(HitInfo)
 		return nil
@@ -170,7 +169,7 @@ func TestIndex_DescNotIndexedBug(t *testing.T) {
 	)
 	hits := []HitInfo{{
 		DocInfo: DocInfo{
-			Package:     "github.com/daviddengcn/gcse",
+			Package:     "github.com/x0rzkov/gcse",
 			Name:        "gcse",
 			Description: description,
 			ReadmeData:  readme,

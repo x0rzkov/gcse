@@ -9,14 +9,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/daviddengcn/go-easybi"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/sort"
 	"github.com/golangplus/strings"
+	"github.com/x0rzkov/go-index"
 	"golang.org/x/net/trace"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/go-easybi"
-	"github.com/daviddengcn/go-index"
+	"github.com/x0rzkov/gcse"
 )
 
 type Hit struct {

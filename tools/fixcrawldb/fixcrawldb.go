@@ -5,15 +5,15 @@ import (
 	"log"
 	"strings"
 
+	"github.com/daviddengcn/sophie"
+	"github.com/daviddengcn/sophie/kv"
 	"github.com/golangplus/errors"
 	"github.com/golangplus/fmt"
 	"github.com/golangplus/strings"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider"
-	"github.com/daviddengcn/sophie"
-	"github.com/daviddengcn/sophie/kv"
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
+	"github.com/x0rzkov/gcse/spider"
 )
 
 func loadDocsPkgs(in kv.DirInput) (stringsp.Set, error) {

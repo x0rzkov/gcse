@@ -8,9 +8,8 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/gcse/configs"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 func init() {

@@ -6,8 +6,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/daviddengcn/gcse"
 	"github.com/daviddengcn/gddo/doc"
+
+	"github.com/x0rzkov/gcse"
 )
 
 func filterPackages(pkgs []string) (res []string) {

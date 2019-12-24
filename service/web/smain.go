@@ -14,16 +14,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/golangplus/bytes"
-	"github.com/golangplus/time"
-
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/golang/glog"
-	"github.com/russross/blackfriday"
+	"github.com/golangplus/bytes"
+	"github.com/golangplus/time"
 	"google.golang.org/grpc"
+	"gopkg.in/russross/blackfriday.v1"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 type UIUtils struct{}

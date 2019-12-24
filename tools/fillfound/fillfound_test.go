@@ -8,11 +8,10 @@ import (
 	"github.com/golangplus/testing/assert"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/store"
-
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
+	sppb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/store"
 )
 
 func init() {

@@ -3,9 +3,8 @@ package gcse
 import (
 	"testing"
 
-	"github.com/golangplus/testing/assert"
-
 	"github.com/daviddengcn/go-villa"
+	"github.com/golangplus/testing/assert"
 )
 
 func TestMemDB_Bug_Sync(t *testing.T) {

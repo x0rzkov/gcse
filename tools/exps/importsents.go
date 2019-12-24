@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/go-villa"
+
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
 )
 
 const (

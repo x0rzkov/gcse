@@ -9,11 +9,10 @@ import (
 	"github.com/golangplus/errors"
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gcse/store"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/spider/github"
+	"github.com/x0rzkov/gcse/store"
 )
 
 type RepositoryInfo struct {

@@ -6,20 +6,19 @@ import (
 
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/testing/assert"
-
-	"github.com/daviddengcn/go-index"
+	"github.com/x0rzkov/go-index"
 )
 
 func TestDocInfo(t *testing.T) {
 	src := DocInfo{
 		Name:        "gcse",
-		Package:     "github.com/daviddengcn/gcse",
+		Package:     "github.com/x0rzkov/gcse",
 		Author:      "github.com/daviddengcn",
 		LastUpdated: time.Now().Round(0),
 		StarCount:   10,
 		Synopsis:    "Go Package Search Engine",
 		Description: "More details about GCSE",
-		ProjectURL:  "http://github.com/daviddengcn/gcse",
+		ProjectURL:  "http://github.com/x0rzkov/gcse",
 		ReadmeFn:    "readme.txt",
 		ReadmeData:  "Just read me",
 		Imports: []string{

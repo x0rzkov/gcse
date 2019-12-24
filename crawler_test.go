@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/daviddengcn/gddo/doc"
+	"github.com/daviddengcn/go-villa"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gddo/doc"
-	"github.com/daviddengcn/go-villa"
+	"github.com/x0rzkov/gcse/configs"
+	"github.com/x0rzkov/gcse/spider/github"
 )
 
 func TestReadmeToText(t *testing.T) {
@@ -59,7 +59,7 @@ func TestCrawlPackage(t *testing.T) {
 	}
 	GithubSpider = github.NewSpiderWithToken(configs.CrawlerGithubPersonal)
 
-	pkg := "github.com/daviddengcn/gcse"
+	pkg := "github.com/x0rzkov/gcse"
 	httpClient := GenHttpClient("")
 	p, _, err := CrawlPackage(ctx, httpClient, pkg, "")
 	if err != nil {
@@ -95,7 +95,7 @@ func TestDocDB(t *testing.T) {
 	var db DocDB = PackedDocDB{NewMemDB("", "")}
 
 	info := DocInfo{
-		Name: "github.com/daviddengcn/gcse",
+		Name: "github.com/x0rzkov/gcse",
 	}
 	db.Put("hello", info)
 	var info2 DocInfo
@@ -122,7 +122,7 @@ func TestDocDB_Export(t *testing.T) {
 	var db DocDB = PackedDocDB{NewMemDB("", "")}
 
 	info := DocInfo{
-		Name: "github.com/daviddengcn/gcse",
+		Name: "github.com/x0rzkov/gcse",
 	}
 
 	db.Put("go", info)
@@ -140,7 +140,7 @@ func TestDocDB_Export(t *testing.T) {
 			return errors.New("Not a DocInfo object")
 		}
 		assert.StringEqual(t, "info.Name", info.Name,
-			"github.com/daviddengcn/gcse")
+			"github.com/x0rzkov/gcse")
 		count++
 		return nil
 	}); err != nil {
@@ -172,8 +172,8 @@ func TestCrawlingEntry(t *testing.T) {
 
 func TestFullProjectOfPackage(t *testing.T) {
 	DATA := []string{
-		"github.com/daviddengcn/gcse", "github.com/daviddengcn/gcse",
-		"github.com/daviddengcn/gcse/index", "github.com/daviddengcn/gcse",
+		"github.com/x0rzkov/gcse", "github.com/x0rzkov/gcse",
+		"github.com/x0rzkov/gcse/index", "github.com/x0rzkov/gcse",
 		"code.google.com/p/go.net/websocket", "code.google.com/p/go.net",
 	}
 

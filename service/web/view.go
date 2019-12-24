@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/ajstarks/svgo"
 	"github.com/golangplus/bytes"
 
-	"github.com/ajstarks/svgo"
-	"github.com/daviddengcn/gcse"
+	"github.com/x0rzkov/gcse"
 )
 
 func pageView(w http.ResponseWriter, r *http.Request) {

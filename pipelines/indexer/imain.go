@@ -4,7 +4,7 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/daviddengcn/gcse/configs"
+	"github.com/x0rzkov/gcse/configs"
 )
 
 func main() {

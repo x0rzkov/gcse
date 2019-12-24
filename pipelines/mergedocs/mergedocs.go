@@ -10,15 +10,15 @@ import (
 	"regexp"
 	"sync/atomic"
 
-	"github.com/golangplus/errors"
-	"github.com/golangplus/strings"
-
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
 	"github.com/daviddengcn/go-villa"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
 	"github.com/daviddengcn/sophie/mr"
+	"github.com/golangplus/errors"
+	"github.com/golangplus/strings"
+
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
 )
 
 func main() {

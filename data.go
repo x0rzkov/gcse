@@ -7,13 +7,12 @@ import (
 	"time"
 	"unicode"
 
+	"github.com/agonopol/go-stem"
+	"github.com/daviddengcn/sophie"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/errors"
 	"github.com/golangplus/strings"
-
-	"github.com/agonopol/go-stem"
-	"github.com/daviddengcn/go-index"
-	"github.com/daviddengcn/sophie"
+	"github.com/x0rzkov/go-index"
 )
 
 // DocInfo is the information stored in backend docDB

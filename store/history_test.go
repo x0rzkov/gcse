@@ -5,13 +5,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/daviddengcn/bolthelper"
+	"github.com/daviddengcn/go-villa"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golangplus/testing/assert"
 
-	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/go-villa"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 func TestUpdateReadDeletePackageHistory(t *testing.T) {

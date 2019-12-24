@@ -5,15 +5,14 @@ import (
 	"log"
 	"time"
 
+	"github.com/daviddengcn/bolthelper"
+	"github.com/golang/protobuf/proto"
+	"github.com/golang/protobuf/ptypes"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/errors"
 
-	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
 )
 
 var (

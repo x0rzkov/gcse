@@ -8,21 +8,20 @@ import (
 	"path"
 	"time"
 
+	"github.com/daviddengcn/sophie"
+	"github.com/daviddengcn/sophie/mr"
 	"github.com/golangplus/errors"
 	"github.com/golangplus/sort"
 	"github.com/golangplus/strings"
+	"github.com/x0rzkov/go-index"
 	"golang.org/x/crypto/ssh/terminal"
+	"gopkg.in/cheggaaa/pb.v1"
 
-	"github.com/cheggaaa/pb"
-	"github.com/daviddengcn/gcse/utils"
-	"github.com/daviddengcn/go-index"
-	"github.com/daviddengcn/sophie"
-	"github.com/daviddengcn/sophie/mr"
+	"github.com/x0rzkov/gcse/utils"
 )
 
 const (
-	HitsArrFn = "hits"
-
+	HitsArrFn      = "hits"
 	IndexTextField = "text"
 	IndexNameField = "name"
 	IndexPkgField  = "pkg"

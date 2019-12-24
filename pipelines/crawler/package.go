@@ -7,22 +7,21 @@ import (
 	"strings"
 	"time"
 
-	"github.com/golangplus/errors"
-	"github.com/golangplus/strings"
-	"github.com/golangplus/time"
-
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
 	"github.com/daviddengcn/gddo/doc"
 	"github.com/daviddengcn/go-easybi"
 	"github.com/daviddengcn/sophie"
 	"github.com/daviddengcn/sophie/kv"
 	"github.com/daviddengcn/sophie/mr"
+	"github.com/golangplus/errors"
+	"github.com/golangplus/strings"
+	"github.com/golangplus/time"
 
-	gpb "github.com/daviddengcn/gcse/shared/proto"
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/spider"
+	"github.com/x0rzkov/gcse/store"
+	"github.com/x0rzkov/gcse/utils"
 )
 
 const (

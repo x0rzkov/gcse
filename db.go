@@ -9,10 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golangplus/strings"
-
-	"github.com/daviddengcn/go-index"
 	"github.com/daviddengcn/go-villa"
+	"github.com/golangplus/strings"
+	"github.com/x0rzkov/go-index"
 )
 
 type MemDB struct {

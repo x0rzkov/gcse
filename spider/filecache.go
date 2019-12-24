@@ -3,11 +3,10 @@ package spider
 import (
 	"log"
 
-	"github.com/golangplus/bytes"
-	"github.com/golangplus/errors"
-
 	"github.com/daviddengcn/bolthelper"
 	"github.com/golang/protobuf/proto"
+	"github.com/golangplus/bytes"
+	"github.com/golangplus/errors"
 )
 
 type FileCache interface {

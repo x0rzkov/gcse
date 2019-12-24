@@ -8,7 +8,7 @@ compileAll := flag.Bool("a", true, `Whether use -a in go install command`)
 
 flag.Parse()
 
-const GCSE = "github.com/daviddengcn/gcse"
+const GCSE = "github.com/x0rzkov/gcse"
 APPS := []string {
   "pipelines/tocrawl", "pipelines/crawler", "pipelines/mergedocs", "pipelines/indexer", "service/stored", "service/web",
 }

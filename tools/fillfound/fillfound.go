@@ -5,11 +5,10 @@ import (
 
 	"github.com/golangplus/time"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
-
-	sppb "github.com/daviddengcn/gcse/proto/spider"
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/store"
+	"github.com/x0rzkov/gcse/utils"
 )
 
 func doFill() error {
@@ -21,7 +20,7 @@ func doFill() error {
 			return nil
 		}
 		site, path := utils.SplitPackage(pkg)
-		return store.AppendPackageEvent(site, path, "unknown", ent.ScheduleTime.Add(-10*timep.Day), sppb.HistoryEvent_Action_None)
+		return store.AppendPackageEvent(site, path, "unknown", ent.ScheduleTime.Add(-10*timep.Day), gcsepb.HistoryEvent_Action_None)
 	})
 }
 

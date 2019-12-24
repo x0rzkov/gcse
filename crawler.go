@@ -17,24 +17,23 @@ import (
 	"time"
 	"unicode/utf8"
 
+	"github.com/daviddengcn/gddo/doc"
+	"github.com/daviddengcn/go-easybi"
+	"github.com/daviddengcn/go-villa"
+	"github.com/daviddengcn/sophie"
+	glgddo "github.com/golang/gddo/doc"
+	"github.com/golang/gddo/gosrc"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/errors"
 	"github.com/golangplus/strings"
 	"github.com/golangplus/time"
+	"github.com/x0rzkov/go-index"
 
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/spider/github"
-	"github.com/daviddengcn/gcse/store"
-	"github.com/daviddengcn/gcse/utils"
-	"github.com/daviddengcn/gddo/doc"
-	"github.com/daviddengcn/go-easybi"
-	"github.com/daviddengcn/go-index"
-	"github.com/daviddengcn/go-villa"
-	"github.com/daviddengcn/sophie"
-	"github.com/golang/gddo/gosrc"
-
-	gpb "github.com/daviddengcn/gcse/shared/proto"
-	glgddo "github.com/golang/gddo/doc"
+	"github.com/x0rzkov/gcse/configs"
+	gpb "github.com/x0rzkov/gcse/shared/proto"
+	"github.com/x0rzkov/gcse/spider/github"
+	"github.com/x0rzkov/gcse/store"
+	"github.com/x0rzkov/gcse/utils"
 )
 
 const (

@@ -8,14 +8,14 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/daviddengcn/bolthelper"
+	"github.com/daviddengcn/go-easybi"
 	"github.com/golangplus/strings"
 
-	"github.com/daviddengcn/bolthelper"
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/gcse/configs"
-	"github.com/daviddengcn/gcse/utils"
-	"github.com/daviddengcn/go-easybi"
-	"github.com/daviddengcn/go-index"
+	"github.com/x0rzkov/gcse"
+	"github.com/x0rzkov/gcse/configs"
+	"github.com/x0rzkov/gcse/utils"
+	"github.com/x0rzkov/go-index"
 )
 
 var (

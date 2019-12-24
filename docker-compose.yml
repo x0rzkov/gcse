@@ -1,0 +1,165 @@
+---
+version: "3.7"
+services:
+
+  gcse-web:
+    image: gcse-web:latest-alpine
+    container_name: gcse-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 80:80
+    depends_on:
+    - redis
+    - memcached
+    networks:
+    - intranet
+    - web
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["web-server"]
+
+  gcse-stored:
+    image: gcse-stored:latest-alpine
+    container_name: gcse-stored
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["stored"]
+
+  gcse-countdocs:
+    image: gcse-countdocs:latest-alpine
+    container_name: gcse-countdocs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["countdocs"]
+
+  gcse-dump:
+    image: gcse-dump:latest-alpine
+    container_name: gcse-dump
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["dump"]
+
+  gcse-exps:
+    image: gcse-exps:latest-alpine
+    container_name: gcse-exps
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["exps"]
+
+  gcse-fillfound:
+    image: gcse-fillfound:latest-alpine
+    container_name: gcse-fillfound
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["fillfound"]
+
+  gcse-fixcrawldb:
+    image: gcse-fixdbcrawl:latest-alpine
+    container_name: gcse-fixcrawldb
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["fixcrawldb"]
+
+  gcse-crawler:
+    image: gcse-crawler:latest-alpine
+    container_name: gcse-crawler
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["crawler"]
+
+  gcse-indexer:
+    image: gcse-indexer:latest-alpine
+    container_name: gcse-indexer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["indexer"]
+
+  gcse-mergedocs:
+    image: gcse-mergedocs:latest-alpine
+    container_name: gcse-mergedocs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["mergedocs"]
+
+  gcse-spider:
+    image: gcse-spider:latest-alpine
+    container_name: gcse-spider
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["spider"]
+
+  gcse-tocrawl:
+    image: gcse-tocrawl:latest-alpine
+    container_name: gcse-tocrawl
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - gcse-data:/opt/gcse/data
+    command: ["tocrawl"]
+
+  redis:
+    image: "redis:alpine"
+    container_name: gcse-redis
+    ports:
+    - "6379:6379"
+    volumes:
+    - redis-data:/data
+    networks:
+    - intranet
+
+  memcached:
+    image: "memcached:alpine"
+    build:
+      context: .docker/memcached
+      dockerfile: Dockerfile
+    container_name: gcse-memcached
+    environment:
+      MEMCACHED_MEMORY: ${MEMCACHED_MEMORY}
+      MEMCACHED_MAX_CONNECTIONS: ${MEMCACHED_MAX_CONNECTIONS}
+      MEMCACHED_MAX_ITEM_SIZE: ${MEMCACHED_MAX_ITEM_SIZE}
+    ports:
+    - "11211:11211"
+    networks:
+    - intranet
+
+volumes:
+    gcse-data:
+    redis-data:
+
+networks: 
+  intranet:
+  web:
+    external: true  

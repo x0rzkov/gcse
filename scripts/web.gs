@@ -1,7 +1,7 @@
 #!/usr/bin/env gosl
 
 import "time"
-import "github.com/daviddengcn/gcse/configs"
+import "github.com/x0rzkov/gcse/configs"
 
 Printfln("Logging to %q...", configs.LogDir)
 

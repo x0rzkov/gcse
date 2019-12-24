@@ -8,12 +8,12 @@ import (
 	"strings"
 	"unicode/utf8"
 
+	"github.com/daviddengcn/go-easybi"
 	"github.com/golangplus/bytes"
 	"github.com/golangplus/encoding/json"
 	"golang.org/x/net/trace"
 
-	"github.com/daviddengcn/gcse"
-	"github.com/daviddengcn/go-easybi"
+	"github.com/x0rzkov/gcse"
 )
 
 func filterFunc(s string, f func(r rune) bool) string {
@@ -40,6 +40,7 @@ type SearchApiHit struct {
 	Synopsis    string `json:"synopsis"`
 	Description string `json:"description"`
 	ProjectURL  string `json:"projecturl"`
+	StarCount   int    `json:"star_count"`
 }
 
 type SearchApiStruct struct {
@@ -64,6 +65,7 @@ func SearchResultToApi(q string, res *SearchResult) *SearchApiStruct {
 			Synopsis:    hit.Synopsis,
 			Description: hit.Description,
 			ProjectURL:  hit.ProjectURL,
+			StarCount:   hit.StarCount,
 		}
 		apiRes.Hits = append(apiRes.Hits, apiHit)
 	}
